@@ -64,47 +64,43 @@ public class TestKlasse {
 
     // Terningopgave hvor jeg laver en ny terning hvor jeg angiver antal sider på terningen
     Die die = new Die(6);
-    final int TRIES = 100;
-    int[] liste = new int[101];  // Lægge kastene ind i et array
-    int count1 = 0;
-    int count2 = 0;
-    int count3 = 0;
-    int count4 = 0;
-    int count5 = 0;
-    int count6 = 0;
+    int tries = 100, roll;
+    int[] liste = new int[6];
 
     System.out.println();
     System.out.println(ANSI_GREEN + "   Result of rolling the dice 100 times:" + ANSI_RESET);
 
-      for (int i = 1; i <= TRIES; i++) {
-        int dice = die.rollDice();
-        liste[i] = i;
-        System.out.printf("%4d", dice);
-        if (i % 10 == 0) System.out.println();
+    for (int i = 1; i <= tries; i++) {
 
-        //TODO: This is not working!
+      int dice = die.rollDice();
+      liste[dice-1]++;
+      System.out.printf("%4d", dice);
+      if (i % 10 == 0) System.out.println();
+    }
+    System.out.println();
+    for (int i = 0; i < 6; i++) {
+      System.out.println("Number of times " + (i+1) + " was rolled = " + liste[i]) ;
+    }
 
-        if (liste[i] == 1) {
-          count1++;
-        } else if (liste[i] == 2) {
-          count2++;
-        } else if (liste[i] == 3) {
-          count3++;
-        } else if (liste[i] == 4) {
-          count4++;
-        } else if (liste[i] == 5) {
-          count5++;
-        } else count6++;
 
+      // Lampeopgave
+
+      Lamp lamp = new Lamp();
+      Lamp deskLamp = new Lamp("Desk lamp", true);
+
+      System.out.println();
+      System.out.println("Is lamp on (should be false)? " + lamp.displayLampStatus());
+      lamp.pushContact();
+      System.out.println("Is lamp on (should be true)? " + lamp.displayLampStatus());
+
+      // Test a desk lamp that is turned on
+      System.out.println("Is desk lamp on (should be true)? " + deskLamp.displayLampStatus());
+      deskLamp.pushContact();
+      System.out.println("Is desk lamp on (should be false)? " + deskLamp.displayLampStatus());
 
     }
-      System.out.println("1: " + count1);
-      System.out.println("2: " + count2);
-      System.out.println("3: " + count3);
-      System.out.println("4: " + count4);
-      System.out.println("5: " + count5);
-      System.out.println("6: " + count6);
 
   }
-}
+
+
 
