@@ -37,13 +37,28 @@ public class Student {
   }
 
 
-
   // Skriv en metode, der kan tilføje en karakter til en studerende.
   public void setKarakter(int eksamen, int karakter){
     karakterer[eksamen-1] = karakter; // -1 --> første kar. i arrayet som bliver opdateret
   }
 
 
+  public String getStudienummer() {
+    return studienummer;
+  }
+
+  public void setStudienummer(String studienummer) {
+    this.studienummer = studienummer;
+  }
+
+  public String getMobilnummer() {
+    return mobilnummer;
+  }
+
+
+  public String getNavn() {
+    return getNavn();
+  }
 }
 
 

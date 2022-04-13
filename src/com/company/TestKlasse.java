@@ -7,7 +7,7 @@ public class TestKlasse {
 
   public static void main(String[] args) {
 
-/*
+  /*
             int[] karakterer;
 
             Student student1 = new Student("Marcus", "0007", "52340457", false);
@@ -16,18 +16,13 @@ public class TestKlasse {
             Student tutorCodelab = new Student("Carsten", "5678", "28396735", true);
 
            // Opgave 1
-           // System.out.println(student1.getNavn());
-           // System.out.println(student1.getStudienummer());
-           // System.out.println(student1.getMobilnummer());
+            System.out.println(student1.getNavn());
+            System.out.println(student1.getStudienummer());
+            System.out.println(student1.getMobilnummer());
 
             //Opdatere en værdi
-            //student1.setStudienummer("303030");
-            //System.out.println("Opdateret studienummer: " + student1.getStudienummer());
-
-            // Opg. 2 med boolean
-            System.out.println(student1.toString());
-            System.out.println(student2.toString());
-            System.out.println(hjælpelærer.toString());
+            student1.setStudienummer("303030");
+            System.out.println("Opdateret studienummer: " + student1.getStudienummer());
 
             // Ændre tutor-status for Rasmus
             hjælpelærer.setTutor(true);
@@ -48,10 +43,12 @@ public class TestKlasse {
             hjælpelærer.setKarakterer(new int[] {12,12,12,12,12,12,12});
             System.out.println(hjælpelærer);
 
- */ // Opgaver med Rasmus
+
+   */
+  // Opgaver med Rasmus
 
     // Personoppave 8.marts af Tine
-        /*    Person person = new Person("Marcus", 37);
+           Person person = new Person("Marcus", 37);
            // Man kan enten bruge toString metoden for at printe
             System.out.println(person);
             person.hasBirthday();
@@ -60,7 +57,6 @@ public class TestKlasse {
             System.out.println(person.getNavn());
             System.out.println(person.getAlder());
 
-         */
 
     // Terningopgave hvor jeg laver en ny terning hvor jeg angiver antal sider på terningen
     Die die = new Die(6);
@@ -81,14 +77,13 @@ public class TestKlasse {
     for (int i = 0; i < 6; i++) {
       System.out.println("Number of times " + (i+1) + " was rolled = " + liste[i]) ;
     }
-
+      System.out.println();
 
       // Lampeopgave
-
+      System.out.println("Lampeopgave med boolean");
       Lamp lamp = new Lamp();
       Lamp deskLamp = new Lamp("Desk lamp", true);
 
-      System.out.println();
       System.out.println("Is lamp on (should be false)? " + lamp.displayLampStatus());
       lamp.pushContact();
       System.out.println("Is lamp on (should be true)? " + lamp.displayLampStatus());
